@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c3e02066b70c22a065f5c94a7599d0d",
+    "content-hash": "14ddcfe0bf69ca72746bb4b1dca2b5a0",
     "packages": [
         {
             "name": "pear/console_getopt",
@@ -285,29 +285,30 @@
         },
         {
             "name": "spojenet/flexibee",
-            "version": "3.5.2",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Spoje-NET/php-abraflexi.git",
-                "reference": "47b42c4271fb5879dcd6f1c25aa06d4c4482acab"
+                "reference": "94ba54a08b66945caa2e79123a4d75bc4974d609"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spoje-NET/php-abraflexi/zipball/47b42c4271fb5879dcd6f1c25aa06d4c4482acab",
-                "reference": "47b42c4271fb5879dcd6f1c25aa06d4c4482acab",
+                "url": "https://api.github.com/repos/Spoje-NET/php-abraflexi/zipball/94ba54a08b66945caa2e79123a4d75bc4974d609",
+                "reference": "94ba54a08b66945caa2e79123a4d75bc4974d609",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "ext-gettext": "*",
                 "ext-json": "*",
-                "vitexsoftware/ease-core": "^1.45"
+                "php": "^8.1",
+                "vitexsoftware/ease-core": "^1.48"
             },
             "require-dev": {
-                "ergebnis/composer-normalize": "^2.43",
-                "ergebnis/php-cs-fixer-config": "^6.34",
+                "ergebnis/composer-normalize": "^2.47",
+                "ergebnis/php-cs-fixer-config": "^6.46",
                 "ext-iconv": "*",
-                "friendsofphp/php-cs-fixer": "^3.61",
+                "friendsofphp/php-cs-fixer": "^3.75",
                 "phing/phing": "*",
                 "phpstan/phpstan": "*",
                 "phpunit/phpunit": "*",
@@ -338,9 +339,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Spoje-NET/php-abraflexi/issues",
-                "source": "https://github.com/Spoje-NET/php-abraflexi/tree/3.5.2"
+                "source": "https://github.com/Spoje-NET/php-abraflexi/tree/3.6.0"
             },
-            "time": "2025-04-09T20:17:35+00:00"
+            "time": "2025-08-09T21:20:37+00:00"
         },
         {
             "name": "vitexsoftware/ease-core",
