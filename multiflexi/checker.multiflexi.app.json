@@ -5,11 +5,12 @@
     "executable": "\/usr\/bin\/abraflexi-client-config-checker",
     "setup": "",
     "cmdparams": "",
-    "requirements": "AbraFlexi",
+    "requirements": ["AbraFlexi"],
     "deploy": "apt install abraflexi-client-config",
     "homepage": "https://github.com/VitexSoftware/php-abraflexi-config",
-    "topics": "AbraFlexi,FlexiBee,Config,Checker",
+    "topics": ["AbraFlexi", "FlexiBee", "Config", "Checker"],
     "uuid": "35478b99-c65f-4cdd-9ee1-744c55d9ac03",
+    "multiflexi": "1.0.0",
     "environment": {
         "APP_DEBUG": {
             "type": "bool",
@@ -49,6 +50,6 @@
             "description": "AbraFlexi Server URI",
             "defval": "https:\/\/demo.flexibee.eu:5434"
         }
-    },
-    "multiflexi": ""
+        }
+    
 }
