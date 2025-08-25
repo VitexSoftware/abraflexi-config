@@ -9,7 +9,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "spojenet/flexibee": "^3.6"
+        "spojenet/flexibee": "^2025.7"
     },
     "require-dev": {
         "phpunit/phpunit": "*",
