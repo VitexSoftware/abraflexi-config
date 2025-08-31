@@ -88,7 +88,12 @@ distributions.each { distro ->
                                 ).trim()
                                 echo "Installing ${pkgName} on ${distroCodename}"
                                 sh """
-                                    sudo DEBIAN_FRONTEND=noninteractive DEBCONF_DEBUG=${debconf_debug} \
+                                    sudo DEBIAN_FRONTEND=noninteractive \
+                                         ABRAFLEXI_URL=https://demo.flexibee.eu:5434 \
+                                         ABRAFLEXI_LOGIN=winstrom \
+                                         ABRAFLEXI_PASSWORD=winstrom \
+                                         ABRAFLEXI_COMPANY=demo_de \
+                                         DEBCONF_DEBUG=${debconf_debug} \
                                          apt-get -y install ${pkgName} \
                                     || sudo apt-get -y -f install
                                 """
