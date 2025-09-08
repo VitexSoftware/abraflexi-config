@@ -285,16 +285,16 @@
         },
         {
             "name": "spojenet/flexibee",
-            "version": "2025.7.0",
+            "version": "2025.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Spoje-NET/php-abraflexi.git",
-                "reference": "5c2782893edd105ee3a54e547aae7f86da776192"
+                "reference": "3558693c62b2f5b505959410c027485aad3f6b7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spoje-NET/php-abraflexi/zipball/5c2782893edd105ee3a54e547aae7f86da776192",
-                "reference": "5c2782893edd105ee3a54e547aae7f86da776192",
+                "url": "https://api.github.com/repos/Spoje-NET/php-abraflexi/zipball/3558693c62b2f5b505959410c027485aad3f6b7e",
+                "reference": "3558693c62b2f5b505959410c027485aad3f6b7e",
                 "shasum": ""
             },
             "require": {
@@ -305,10 +305,10 @@
                 "vitexsoftware/ease-core": "^1.49"
             },
             "require-dev": {
-                "ergebnis/composer-normalize": "^2.47",
-                "ergebnis/php-cs-fixer-config": "^6.52",
+                "ergebnis/composer-normalize": "^2.48",
+                "ergebnis/php-cs-fixer-config": "^6.53",
                 "ext-iconv": "*",
-                "friendsofphp/php-cs-fixer": "^3.85",
+                "friendsofphp/php-cs-fixer": "^3.86",
                 "phing/phing": "*",
                 "phpstan/phpstan": "*",
                 "phpunit/phpunit": "*",
@@ -339,9 +339,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Spoje-NET/php-abraflexi/issues",
-                "source": "https://github.com/Spoje-NET/php-abraflexi/tree/2025.7.0"
+                "source": "https://github.com/Spoje-NET/php-abraflexi/tree/2025.7.4"
             },
-            "time": "2025-08-14T09:28:45+00:00"
+            "time": "2025-09-03T08:37:31+00:00"
         },
         {
             "name": "vitexsoftware/ease-core",
