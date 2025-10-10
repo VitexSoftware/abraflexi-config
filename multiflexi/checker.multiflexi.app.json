@@ -1,55 +1,87 @@
 {
-    "image": "",
-    "name": "AbraFlexi Checker",
-    "description": "Check AbraFlexi availbility",
-    "executable": "\/usr\/bin\/abraflexi-client-config-checker",
-    "setup": "",
-    "cmdparams": "",
-    "requirements": ["AbraFlexi"],
-    "deploy": "apt install abraflexi-client-config",
-    "homepage": "https://github.com/VitexSoftware/php-abraflexi-config",
-    "topics": ["AbraFlexi", "FlexiBee", "Config", "Checker"],
+    "$schema": "https://raw.githubusercontent.com/VitexSoftware/php-vitexsoftware-multiflexi-core/refs/heads/main/multiflexi.app.schema.json",
+    "schemaVersion": "3.0.0",
     "uuid": "35478b99-c65f-4cdd-9ee1-744c55d9ac03",
-    "multiflexi": "1.0.0",
+    "name": {
+        "en": "AbraFlexi Checker",
+        "cs": "AbraFlexi Checker"
+    },
+    "description": {
+        "en": "Check AbraFlexi availbility",
+        "cs": "Check AbraFlexi availbility"
+    },
+    "tags": [
+        "AbraFlexi",
+        "FlexiBee",
+        "Config",
+        "Checker"
+    ],
+    "homepage": "https://github.com/VitexSoftware/php-abraflexi-config",
+    "image": "",
+    "executable": "/usr/bin/abraflexi-client-config-checker",
     "environment": {
         "APP_DEBUG": {
             "type": "bool",
-            "description": "Show debug messages",
+            "description": {
+                "en": "Show debug messages",
+                "cs": "Show debug messages"
+            },
             "defval": "False",
-            "required": true
+            "required": true,
+            "category": "Behavior"
         },
         "RESULT_FILE": {
             "type": "string",
-            "description": "write output json data to",
+            "description": {
+                "en": "write output json data to",
+                "cs": "write output json data to"
+            },
             "defval": "reminder_{ABRAFLEXI_COMPANY}.json",
-            "required": false
+            "required": false,
+            "category": "Other"
         },
         "EASE_LOGGER": {
             "type": "string",
-            "description": "write log messages using",
+            "description": {
+                "en": "write log messages using",
+                "cs": "write log messages using"
+            },
             "defval": "console|syslog",
-            "required": false
+            "required": false,
+            "category": "Behavior"
         },
         "ABRAFLEXI_COMPANY": {
             "type": "string",
             "description": "",
-            "defval": "demo_de"
+            "defval": "demo_de",
+            "category": "API"
         },
         "ABRAFLEXI_LOGIN": {
             "type": "string",
-            "description": "AbraFlexi Login",
-            "defval": "winstrom"
+            "description": {
+                "en": "AbraFlexi Login",
+                "cs": "AbraFlexi Login"
+            },
+            "defval": "winstrom",
+            "category": "API"
         },
         "ABRAFLEXI_PASSWORD": {
-            "type": "string",
-            "description": "AbraFlexi password",
-            "defval": "winstrom"
+            "type": "password",
+            "description": {
+                "en": "AbraFlexi password",
+                "cs": "AbraFlexi password"
+            },
+            "defval": "winstrom",
+            "category": "API"
         },
         "ABRAFLEXI_URL": {
             "type": "string",
-            "description": "AbraFlexi Server URI",
-            "defval": "https:\/\/demo.flexibee.eu:5434"
+            "description": {
+                "en": "AbraFlexi Server URI",
+                "cs": "AbraFlexi Server URI"
+            },
+            "defval": "https://demo.flexibee.eu:5434",
+            "category": "API"
         }
-        }
-    
+    }
 }
