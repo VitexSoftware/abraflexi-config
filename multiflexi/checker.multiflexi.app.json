@@ -4,11 +4,11 @@
     "uuid": "35478b99-c65f-4cdd-9ee1-744c55d9ac03",
     "name": {
         "en": "AbraFlexi Checker",
-        "cs": "AbraFlexi Checker"
+        "cs": "Kontrola AbraFlexi"
     },
     "description": {
         "en": "Check AbraFlexi availbility",
-        "cs": "Check AbraFlexi availbility"
+        "cs": "Kontrola dostupnosti AbraFlexi"
     },
     "tags": [
         "AbraFlexi",

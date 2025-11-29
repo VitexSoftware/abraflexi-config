@@ -28,7 +28,7 @@ Description: Check php-abraflexi functionality
  Probe configuration for php-abraflexi based tools
 
 Package: multiflexi-abraflexi-client-check
-Depends: abraflexi-client-check, multiflexi
+Depends: abraflexi-client-check, multiflexi-cli
 Architecture: all
 Section: web
 Priority: optional
