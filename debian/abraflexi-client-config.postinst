@@ -1,9 +1,7 @@
 #!/bin/sh
 # postinst script for abraflexi-client-config
 
-#export DH_VERBOSE=1
-
-CONFIGFILE=/etc/abraflexi/client.json
+ #export DH_VERBOSE=1
 set -e
 . /usr/share/debconf/confmodule
 
@@ -22,6 +20,23 @@ if [ "$1" = "configure" ]; then
     db_get abraflexi-client-config/ENVIRONMENT_ABRAFLEXI_CONFIG
     if [ "$RET" = "true" ]; then
 	abraflexi-config-export > /etc/profile.d/abraflexi-client.sh
+    fi
+
+    ENVFILE="/etc/abraflexi/.env"
+    if [ ! -f "$ENVFILE" ]; then
+        db_get abraflexi-client-config/ABRAFLEXI_URL
+        ABRAFLEXI_URL="$RET"
+        db_get abraflexi-client-config/ABRAFLEXI_LOGIN
+        ABRAFLEXI_LOGIN="$RET"
+        db_get abraflexi-client-config/ABRAFLEXI_PASSWORD
+        ABRAFLEXI_PASSWORD="$RET"
+        db_get abraflexi-client-config/ABRAFLEXI_COMPANY
+        ABRAFLEXI_COMPANY="$RET"
+        echo "ABRAFLEXI_URL=\"$ABRAFLEXI_URL\"" > "$ENVFILE"
+        echo "ABRAFLEXI_LOGIN=\"$ABRAFLEXI_LOGIN\"" >> "$ENVFILE"
+        echo "ABRAFLEXI_PASSWORD=\"$ABRAFLEXI_PASSWORD\"" >> "$ENVFILE"
+        echo "ABRAFLEXI_COMPANY=\"$ABRAFLEXI_COMPANY\"" >> "$ENVFILE"
+        chmod 600 "$ENVFILE"
     fi
 
 fi
