@@ -24,7 +24,7 @@
             "type": "bool",
             "description": {
                 "en": "Show debug messages",
-                "cs": "Show debug messages"
+                "cs": "Zobrazit ladicí zprávy"
             },
             "defval": "False",
             "required": true,
@@ -34,7 +34,7 @@
             "type": "string",
             "description": {
                 "en": "write output json data to",
-                "cs": "write output json data to"
+                "cs": "zapsat výstupní json data do"
             },
             "defval": "reminder_{ABRAFLEXI_COMPANY}.json",
             "required": false,
@@ -44,7 +44,7 @@
             "type": "string",
             "description": {
                 "en": "write log messages using",
-                "cs": "write log messages using"
+                "cs": "zapisovat log zprávy pomocí"
             },
             "defval": "console|syslog",
             "required": false,
@@ -60,7 +60,7 @@
             "type": "string",
             "description": {
                 "en": "AbraFlexi Login",
-                "cs": "AbraFlexi Login"
+                "cs": "AbraFlexi Přihlašovací jméno"
             },
             "defval": "winstrom",
             "category": "API"
@@ -69,7 +69,7 @@
             "type": "password",
             "description": {
                 "en": "AbraFlexi password",
-                "cs": "AbraFlexi password"
+                "cs": "AbraFlexi Heslo"
             },
             "defval": "winstrom",
             "category": "API"
@@ -82,9 +82,10 @@
             },
             "defval": "https://demo.flexibee.eu:5434",
             "category": "API"
+
         }
     },
-    "exitCodes": {
+"exitCodes": {
         "0": {
             "description": {
                 "en": "Success",
