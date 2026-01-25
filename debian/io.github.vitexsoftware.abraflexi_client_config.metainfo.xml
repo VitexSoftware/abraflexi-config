@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="console-application">
+  <id>io.github.vitexsoftware.abraflexi_client_config</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>GPL-2</project_license>
+  <name>abraflexi-client-config</name>
+  <summary>config and configurator for php-abraflexi</summary>
+  <description>
+    <p>
+      Setup and probe shared configuration for AbraFlexi based tools Probe configuration for php-abraflexi based tools Diagnostic tool for MultiFlexi Setup and probe shared configuration for AbraFlexi based web app
+    </p>
+  </description>
+  <categories>
+    <category>System</category>
+    <category>ConsoleOnly</category>
+  </categories>
+  <url type="homepage">https://github.com/VitexSoftware/abraflexi-config</url>
+  <url type="bugtracker">https://github.com/VitexSoftware/abraflexi-config/issues</url>
+  <developer id="cz.vitexsoftware">
+    <name>VitexSoftware</name>
+  </developer>
+  <provides>
+    <binary>abraflexi-client-config</binary>
+  </provides>
+  <content_rating type="oars-1.1"/>
+</component>

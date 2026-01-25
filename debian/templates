@@ -12,7 +12,7 @@ _Description: Publish configuration as apache configuration ?
 
 Template: abraflexi-client-config/ABRAFLEXI_URL
 Type: string
-Default: https://demo.flexibee.eu
+Default: https://demo.flexibee.eu:5434
 _Description: AbraFlexi API URL:
  URL with protocol, hostname and optional port ( https://localhost:5434 )
 
