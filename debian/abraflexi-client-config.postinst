@@ -5,7 +5,6 @@
 set -e
 . /usr/share/debconf/confmodule
 
-composer-debian abraflexi-client-config
 
 if [ "$1" = "configure" ]; then
     db_get abraflexi-client-config/ABRAFLEXI_URL

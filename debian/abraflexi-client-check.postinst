@@ -6,7 +6,6 @@
 set -e
 . /usr/share/debconf/confmodule
 
-composer-debian abraflexi-client-check
  
 #DEBHELPER#
 
