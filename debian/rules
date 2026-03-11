@@ -4,11 +4,7 @@
 	dh $@
 
 override_dh_auto_build:
-	# Generate Debian autoloader for abraflexi-client-config
-	echo '<?php' > debian/autoload.php
-	echo '// Debian autoloader for abraflexi-client-config' >> debian/autoload.php
-	echo '// Load dependency autoloaders' >> debian/autoload.php
-	echo "require_once '/usr/share/php/AbraFlexi/autoload.php';" >> debian/autoload.php
+	# No build step needed - autoloader is in debian/autoload.php
 
 override_dh_install:
 	jq '.version = "'`dpkg-parsechangelog | sed -n 's/^Version: //p'| sed 's/~.*//' `'"'  debian/conf/composer.json |sponge debian/conf/composer.json
