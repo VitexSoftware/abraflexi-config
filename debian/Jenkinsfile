@@ -54,6 +54,7 @@ distributions.each { distro ->
                             dch -b -v ${buildVer} "${env.BUILD_TAG}"
                             sudo apt-get update --allow-releaseinfo-change
                             sudo chown -R jenkins:jenkins . ..
+                            sudo rm -rf debian/$(dpkg-parsechangelog --show-field Source)/ debian/.debhelper/ debian/tmp/
                             debuild-pbuilder -r'sudo -E' -i -us -uc -b
                             mkdir -p \$WORKSPACE/dist/debian/
                             rm -rf \$WORKSPACE/dist/debian/*
