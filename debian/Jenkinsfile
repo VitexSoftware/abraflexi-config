@@ -36,6 +36,7 @@ distributions.each { distro ->
         def buildVer
 
         node {
+            timeout(time: 30, unit: 'MINUTES') {
             ansiColor('xterm') {
                 stage("Checkout ${distro}") {
                     checkout scm
@@ -119,6 +120,7 @@ distributions.each { distro ->
                     }
                 }
 
+            }
             }
         }
     }
