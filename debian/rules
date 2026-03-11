@@ -3,11 +3,23 @@
 %:
 	dh $@
 
+override_dh_auto_build:
+	# Generate Debian autoloader for abraflexi-client-config
+	cat > debian/autoload.php <<'AUTOLOADER'
+<?php
+// Debian autoloader for abraflexi-client-config
+// Load dependency autoloaders
+require_once '/usr/share/php/AbraFlexi/autoload.php';
+AUTOLOADER
+
 override_dh_install:
 	jq '.version = "'`dpkg-parsechangelog | sed -n 's/^Version: //p'| sed 's/~.*//' `'"'  debian/conf/composer.json |sponge debian/conf/composer.json
 	dh_install
-	sed -i -e 's/..\/vendor/\/var\/lib\/composer\/abraflexi-client-check/g'   debian/abraflexi-client-check/usr/share/abraflexi-client-check/*.php
-	sed -i -e 's/..\/vendor/\/var\/lib\/composer\/abraflexi-client-config/g'   debian/abraflexi-client-config/usr/share/abraflexi-client-config/*.php
+	install -D -m 0644 debian/autoload.php debian/abraflexi-client-check/usr/share/php/abraflexi-client-check/autoload.php
+	install -D -m 0644 debian/autoload.php debian/abraflexi-client-config/usr/share/php/abraflexi-client-config/autoload.php
+	sed -i -e 's/\.\.\/vendor/\/usr\/share\/php\/abraflexi-client-check/g'   debian/abraflexi-client-check/usr/share/abraflexi-client-check/*.php
+	sed -i -e 's/\.\.\/vendor/\/usr\/share\/php\/abraflexi-client-config/g'   debian/abraflexi-client-config/usr/share/abraflexi-client-config/*.php
+	sed -i -e 's/\.\.\/client\.json/\/etc\/abraflexi\/client.json/g'   debian/abraflexi-client-config/usr/share/abraflexi-client-config/*.php
 	sed -i -e 's/\.\./\/etc\/abraflexi/g' 	     debian/abraflexi-client-check/usr/share/abraflexi-client-check/*.php
 	sed -i -e 's/\.\.\/.env//g'  debian/abraflexi-client-check/usr/share/abraflexi-client-check/*.php
 override_dh_clean:
