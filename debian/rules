@@ -11,11 +11,11 @@ override_dh_install:
 	dh_install
 	install -D -m 0644 debian/autoload.php debian/abraflexi-client-check/usr/share/php/abraflexi-client-check/autoload.php
 	install -D -m 0644 debian/autoload.php debian/abraflexi-client-config/usr/share/php/abraflexi-client-config/autoload.php
-	sed -i -e 's/\.\.\/vendor/\/usr\/share\/php\/abraflexi-client-check/g'   debian/abraflexi-client-check/usr/share/abraflexi-client-check/*.php
-	sed -i -e 's/\.\.\/vendor/\/usr\/share\/php\/abraflexi-client-config/g'   debian/abraflexi-client-config/usr/share/abraflexi-client-config/*.php
-	sed -i -e 's/\.\.\/client\.json/\/etc\/abraflexi\/client.json/g'   debian/abraflexi-client-config/usr/share/abraflexi-client-config/*.php
-	sed -i -e 's/\.\./\/etc\/abraflexi/g' 	     debian/abraflexi-client-check/usr/share/abraflexi-client-check/*.php
-	sed -i -e 's/\.\.\/.env//g'  debian/abraflexi-client-check/usr/share/abraflexi-client-check/*.php
+	sed -i -e 's/\.\.\/vendor/\/usr\/share\/php\/abraflexi-client-check/g'  	 debian/abraflexi-client-check/usr/share/abraflexi-client-check/*.php
+	sed -i -e 's/\.\.\/vendor/\/usr\/share\/php\/abraflexi-client-config/g' 	 debian/abraflexi-client-config/usr/share/abraflexi-client-config/*.php
+	sed -i -e 's/\.\.\/client\.json/\/etc\/abraflexi\/client.json/g' 	  	 debian/abraflexi-client-config/usr/share/abraflexi-client-config/*.php
+	sed -i -e 's/\.\./\/etc\/abraflexi/g' 			 	                 debian/abraflexi-client-check/usr/share/abraflexi-client-check/*.php
+	sed -i -e 's/\.\.\/.env//g'  							 debian/abraflexi-client-check/usr/share/abraflexi-client-check/*.php
 override_dh_clean:
 	debconf-updatepo
 	dh_clean
